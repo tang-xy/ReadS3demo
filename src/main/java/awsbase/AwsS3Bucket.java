@@ -31,7 +31,8 @@ public class AwsS3Bucket extends AwsS3Client {
         /**
          * 创建一个s3桶-带参数
          */
-        public void createBucketWithParams() {
+        public void createBucketWithParams(String bucketname) {
+            bucketName = bucketname;
             //指定名称和区域
             CreateBucketRequest createBucketRequest = new CreateBucketRequest(bucketName);
             //创建公开可读的桶

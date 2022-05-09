@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("test");
         AwsS3Bucket bucket = new AwsS3Bucket();
-        bucket.createBucketBase();
+        bucket.createBucketWithParams("testbucket");
         bucket.listBuckets();
-        bucket.uploadFile("key","path");
-        gdalReadS3("/vsis3/bucket/key");
+        bucket.uploadFile("testkey","/zhaolong/data/Landsat8/clip/LC82015122103026741006,03310.tif");
+        gdalReadS3("/vsis3/testbucket/testkey");
 
     }
 

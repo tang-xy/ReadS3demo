@@ -6,6 +6,8 @@ A demo about random reading of (primarily non-public) files available in AWS S3 
 
 This demo is dependent on `org.gdal:gdal >= 2.3` and `com.amazonaws:aws-java-sdk >= 1.11.538`.
 
+It requires GDAL to be built against libcurl.
+
 ## About
 
 Starting with GDAL 3.2, direct writing of GeoTIFF files with the GTiff driver is supported.
