@@ -7,7 +7,7 @@ public class AwsBaseClient {
      * Secret access key
      */
     protected String awsSecretKey = "m0I03C0oWxnFrRFVq2KNRcwZPSh0ffiaxpFmexnA";
-    protected String endPoint = "https://ceph1:7480";
+    protected String endPoint = "http://10.3.102.82:7480";
 
     public AwsBaseClient() {
     }

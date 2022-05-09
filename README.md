@@ -8,6 +8,15 @@ This demo is dependent on `org.gdal:gdal >= 2.3` and `com.amazonaws:aws-java-sdk
 
 It requires GDAL to be built against libcurl.
 
+To build GDAL, you can build from source like:
+```shell
+./configure --with-curl=/usr/bin/curl-config --with-java --with-proj=/usr/lib/x86_64-linux-gnu/libproj.la
+
+make
+cd swig/java
+make
+```
+
 ## About
 
 Starting with GDAL 3.2, direct writing of GeoTIFF files with the GTiff driver is supported.

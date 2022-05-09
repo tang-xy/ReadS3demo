@@ -9,7 +9,7 @@ import java.util.List;
 public class AwsS3Bucket extends AwsS3Client {
 
 
-        private String bucketName = "bucket-name";
+        private String bucketName = "testbucket";
         /**
          * 列出所有的s3桶
          */
@@ -35,6 +35,7 @@ public class AwsS3Bucket extends AwsS3Client {
             bucketName = bucketname;
             //指定名称和区域
             CreateBucketRequest createBucketRequest = new CreateBucketRequest(bucketName);
+
             //创建公开可读的桶
             //ACL有如下几种"private","public-read","public-read-write","authenticated-read"
             createBucketRequest.setCannedAcl(CannedAccessControlList.PublicReadWrite);

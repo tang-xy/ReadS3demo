@@ -2,6 +2,7 @@ package awsbase;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
@@ -12,8 +13,10 @@ public class AwsS3Client extends AwsBaseClient  {
     public AwsS3Client() {
         super();
         BasicAWSCredentials awsCreds = new BasicAWSCredentials(awsAccessKey, awsSecretKey);
-        this.s3 = AmazonS3Client.builder().withCredentials(new AWSStaticCredentialsProvider(awsCreds)).build();
-        this.s3.setEndpoint(endPoint);
+//        this.s3 = new AmazonS3Client(awsCreds);
+        this.s3 = AmazonS3Client.builder().withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(endPoint,""))
+                .withCredentials(new AWSStaticCredentialsProvider(awsCreds)).build();
+//        this.s3.setEndpoint(endPoint);
     }
 
     public AwsS3Client(String awsAccessKey, String awsSecretKey,String endPoint) {
