@@ -15,9 +15,9 @@ public class Main {
 
     public static void gdalReadS3(String rasterFilePath) {
         gdal.AllRegister();
-        gdal.SetConfigOption("AWS_SECRET_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY");
-        gdal.SetConfigOption("AWS_ACCESS_KEY_ID", "AWS_ACCESS_KEY_ID");
-        gdal.SetConfigOption("AWS_S3_ENDPOINT", "http://ceph01:7480");
+        gdal.SetConfigOption("AWS_SECRET_ACCESS_KEY", "m0I03C0oWxnFrRFVq2KNRcwZPSh0ffiaxpFmexnA");
+        gdal.SetConfigOption("AWS_ACCESS_KEY_ID", "MCNBMBAERC2UA0E2EA4P");
+        gdal.SetConfigOption("AWS_S3_ENDPOINT", "http://ceph1:7480");
         Dataset dataset = gdal.Open(rasterFilePath, gdalconstConstants.GA_ReadOnly);
         Driver driver = dataset.GetDriver();
         System.out.println("Driver: " + driver.getShortName() + "/" + driver.getLongName());

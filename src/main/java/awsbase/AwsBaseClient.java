@@ -2,12 +2,12 @@
 package awsbase;
 
 public class AwsBaseClient {
-    protected String awsAccessKey = "ak";
+    protected String awsAccessKey = "MCNBMBAERC2UA0E2EA4P";
     /**
      * Secret access key
      */
-    protected String awsSecretKey = "sk";
-    protected String endPoint = "https://ceph01:7480";
+    protected String awsSecretKey = "m0I03C0oWxnFrRFVq2KNRcwZPSh0ffiaxpFmexnA";
+    protected String endPoint = "https://ceph1:7480";
 
     public AwsBaseClient() {
     }
