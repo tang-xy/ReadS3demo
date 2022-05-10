@@ -64,16 +64,17 @@ public class AwsS3Bucket extends AwsS3Client {
         /**
         * 获取文件流
         */
-        public StringBuffer downloadFile(String key) throws IOException {
+        public byte[] downloadFile(String key) throws IOException {
             S3Object s3Object = s3.getObject(bucketName, key);
-
+            long objlong = s3.getObjectMetadata(bucketName, key).getContentLength();
             S3ObjectInputStream s3ObjectInputStream = s3Object.getObjectContent();
-            StringBuffer stringBuffer = new StringBuffer();
-            byte[] buffer = new byte[1024];
-            while ((s3ObjectInputStream.read(buffer)) != -1) {
-                stringBuffer.append(new String(buffer, "UTF-8"));
-            }
+//            StringBuffer stringBuffer = new StringBuffer();
+            byte[] buffer = new byte[(int) objlong];
+            s3ObjectInputStream.read(buffer);
+//            while ((s3ObjectInputStream.read(buffer)) != -1) {
+//                stringBuffer.append(new String(buffer, "UTF-8"));
+//            }
             s3ObjectInputStream.close();
-            return stringBuffer;
+            return buffer;
         }
 }

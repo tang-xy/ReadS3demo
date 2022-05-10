@@ -4,7 +4,7 @@ A demo about random reading of (primarily non-public) files available in AWS S3 
 
 ## Dependencies
 
-This demo is dependent on `org.gdal:gdal >= 2.3` and `com.amazonaws:aws-java-sdk >= 1.11.538`.
+This demo is dependent on `org.gdal:gdal = 2.2` and `com.amazonaws:aws-java-sdk >= 1.11.538`.
 
 It requires GDAL to be built against libcurl.
 

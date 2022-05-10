@@ -12,9 +12,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="Maven: org.gdal:gdal:3.4.3">
+      <library name="Maven: org.gdal:gdal:2.2.2">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/gdal-3.4.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/gdal.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -16,9 +16,9 @@
         <dependency>
             <groupId>org.gdal</groupId>
             <artifactId>gdal</artifactId>
-            <version>3.4.3</version>
+            <version>2.2.2</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/gdal-3.4.3.jar</systemPath>
+            <systemPath>${project.basedir}/lib/gdal.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
@@ -39,6 +39,8 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+
 
 
 </project>
